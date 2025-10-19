@@ -5,8 +5,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
+    <meta name="author" content="Mohammad Ahmadi">
+     <meta name="discription" content="A simple, Responsive image Gallery build with HTML, CSS created by Mohammad">
+     <meta name="keywords" content="Responsive navbar, HTML CSS project,Web development Github project" >
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar-project</title>
+    <title>Responsive Navbar</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -14,18 +18,23 @@
         <div class="container navbar">
             <a href="#" class="logo">Navbar-project</a>
             <nav>
-                <ul>
+                <img src="assets/close.svg" class="close-btn" alt="close">
+                <ul>    
                     <li ><a href="#" class="active">Home</a></li>
                      <li><a href="#">product</a></li>
                       <li><a href="#">About</a></li>
                 </ul>
                
             </nav>
+            <div class="mobile-cart-menu">
              <a href="#" class="cart">
                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="#000000"><g fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M6 6h24l-3 13H9m18 4H10L5 2H2"/><circle cx="25" cy="27" r="2"/><circle cx="12" cy="27" r="2"/></g></svg>
                     <p>Cart</p>
                 </a>
 
+                <img src="assets/menu.svg" class="menu-btn" alt="">
+
+        </div>
         </div>
       
     </header>
@@ -36,6 +45,20 @@
         <h3>this is my first project, a basic Desktop navbar using pure <span>HTML</span>  and <span>CSS</span>. i will be adding more project over time as i continue learning and improving.</h3>
         <h3>Stay tuned for more projects!</h3>
     </div>
+    <script>
+    document.querySelector(".menu-btn").addEventListener("click", () => {
+  console.log("clicked");
+  document.querySelector('nav').classList.toggle('open')
+  
+});
+    document.querySelector(".close-btn").addEventListener("click", () => {
+  console.log("clicked");
+  document.querySelector('nav').classList.toggle('open')
+  
+});
+
+
+    </script>
     
 </body>
 </html>

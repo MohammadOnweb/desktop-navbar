@@ -20,17 +20,35 @@ header{
     max-width: 1200px;
     margin: 0 auto;
 }
+.close-btn{
+    cursor: pointer;
+    display: block;
+    width: 3rem;
+margin-left: auto;
+margin-bottom: 6.6rem;
+}
+nav{
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 33%;
+    background-color: white;
+    height: 100vh;
+    padding: 4.6em;
+    transition: right .8s ease-in-out;
+
+}
+.menu-btn{
+    width: 3rem;
+    cursor: pointer;
+}
 .navbar{
     display: flex ;
     justify-content: space-between;
     align-items: center;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 a.logo{
     color: blue;
@@ -42,6 +60,8 @@ a{
 }
 ul{
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     gap: 4.3em;
     list-style-type: none;
     margin: 0;
@@ -87,5 +107,39 @@ padding: 2px;
 
 }
 span{
-   color: green;
+   color: green ;
+}
+
+.mobile-cart-menu{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.open{
+    right: 0%;
+}
+
+@media screen and  (min-width: 600px){
+    .menu-btn, .close-btn{
+        display: none;
+    }
+   
+    nav{
+        position: unset;
+        height: auto;
+        background: none;
+        padding: 0;
+        width: auto;
+    }
+    ul{
+        flex-direction: row;
+    }
+    
+}
+@media (max-width:600px){
+    .description{
+        display: none;
+    }
+    
 }
